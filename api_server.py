@@ -7,6 +7,8 @@ import datetime
 app = Flask(__name__)
 
 @app.route('/json-to-zip', methods=['POST'])
+def index():
+    return "<h1>Markdown Zip Packager API is running!</h1><p>Please send a POST request to /json-to-zip with your JSON data.</p>"
 def handle_zip_conversion():
     try:
         # 1. 获取输入的 JSON 数据
